@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/all.min.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>CRUD</title>
+</head>
+<body>
+    <div class="container py-5">
+        <div class="form-group my-3">
+            <label for="productNameInput">ProductName : </label>
+            <input class="form-control" type="text" id="productNameInput" placeholder="Ex. Samsung">
+            <div id="productNameAlert" class="alert alert-danger mt-2 d-none">
+                <ul class="p-0 m-0 ps-2">
+                    <li>Product name must start with uppercase</li>
+                    <li>Product name must be more than 3 characters</li>
+                    <li>Product name must be less than 20 characters</li>
+                </ul>
+            </div>
+        </div>
+        <div class="form-group my-3">
+            <label for="productPriceInput">ProductPrice : </label>
+            <input class="form-control" type="number" id="productPriceInput">
+            <div id="productPriceAlert" class="alert alert-danger mt-2 d-none">
+                <p class="mb-0">Product price must be more than 0</p>
+            </div>
+        </div>
+        <div class="form-group my-3">
+            <label for="productCategoryInput">ProductCategory : </label>
+            <input class="form-control" type="text" id="productCategoryInput">
+            <div id="productCategoryAlert" class="alert alert-danger mt-2 d-none">
+                <ul class="p-0 m-0 ps-2">
+                    <li>Product category must start with uppercase</li>
+                    <li>Product category must be more than 3 characters</li>
+                    <li>Product category must be less than 20 characters</li>
+                </ul>
+            </div>
+        </div>
+        <div class="form-group my-3">
+            <label for="productDescInput">ProductDesc : </label>
+            <textarea class="form-control" type = "text" id="productDescInput"></textarea>
+            <div id="productDescAlert" class="alert alert-danger mt-2 d-none">
+                <ul class="p-0 m-0 ps-2">
+                    <li>Product description must start with uppercase</li>
+                    <li>Product description must be more than 1 character</li>
+                </ul>
+            </div>
+        </div>
+
+        <button onclick="addUpdateProduct()" id="addUpdateBtn" class="btn btn-info my-5">Add Product</button>
+
+        <input onkeyup="displayProducts()" id="searchInput" class=" form-control m-auto mb-5 w-50" type="text" placeholder="Search...">
+
+        <table class="table">
+            <thead>
+                <th>Index</th>
+                <th>Product Name</th>
+                <th>Product Price</th>
+                <th>Product Category</th>
+                <th>Product Desc</th>
+                <th>Update</th>
+                <th>Delete</th>
+            </thead>
+            <tbody id="tableBody">
+                
+            </tbody>
+        </table>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
